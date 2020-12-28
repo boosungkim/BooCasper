@@ -992,15 +992,6 @@ make sure this only happens on large viewports / desktop-ish devices.
     font-weight: 300;
 }
 
-.inner-tags {
-  overflow: hidden;
-  width: 100%;
-}
-
-.tag-indiv {
-  float: left;
-}
-
 .date-divider {
     display: inline-block;
     margin: 0 6px 1px;

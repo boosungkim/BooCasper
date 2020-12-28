@@ -16,13 +16,11 @@
       <h1 class="post-full-title">{{title}}</h1>
     </header>
     {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
-      <div id="inner-tags">
       {{#foreach tags}}
-          <a href='{{ url }}' id='tag-indiv'>
+          <a href='{{ url }}' style='display: table-cell'>
           <h2>{{ name }} <small>({{ count.posts }})</small></h2>
           </a>
         {{/foreach}}
-      </div>
     {{/get}}
   </div>
 </main>
