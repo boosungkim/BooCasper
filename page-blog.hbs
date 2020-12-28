@@ -17,8 +17,8 @@
     </header>
     {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
       {{#foreach tags}}
-          <a href='{{ url }}' style='display: table-cell'>
-          <h2></br>{{ name }} <small>({{ count.posts }})</small></br></h2>
+          <a href='{{ url }}' style='display: table-cell; padding-left: 5px; padding-right: 5px'>
+          <h2>{{ name }} <small>({{ count.posts }})</small></h2>
           </a>
         {{/foreach}}
     {{/get}}
