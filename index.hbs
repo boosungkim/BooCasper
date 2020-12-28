@@ -21,7 +21,7 @@ into the {body} of the default.hbs template --}}
 </header>
 
 {{!-- The main content area --}}
-<!-- <main id="site-main" class="site-main outer">
+<main id="site-main" class="site-main outer">
     <div class="inner posts">
 
         <div class="post-feed">
@@ -97,17 +97,9 @@ into the {body} of the default.hbs template --}}
 </script>
 {{/contentFor}}
 
-{{^is "paged"}}
-    {{#get "posts" limit="3"}}
-        {{#if posts}}
-            {{#foreach posts}}
-                <h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
-            {{/foreach}}
-        {{/if}}
-    {{/get}}
-{{/is}} -->
 
-<main id="site-main" class="site-main outer">
+
+<!-- <main id="site-main" class="site-main outer">
     <div class="inner posts">
 
         <div class="post-feed">
