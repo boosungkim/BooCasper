@@ -15,7 +15,6 @@
     <header class="post-full-header">
       <h1 class="post-full-title">{{title}}</h1>
     </header>
-    <div style='margin: auto'>
     {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
       {{#foreach tags}}
           </br> <a href='{{ url }}' style='display: table-cell'>
@@ -23,7 +22,6 @@
           </a> </br>
         {{/foreach}}
     {{/get}}
-   </div>
   </div>
 </main>
 
