@@ -98,7 +98,7 @@ into the {body} of the default.hbs template --}}
 {{/contentFor}} -->
 
 {{^is "paged"}}
-    {{#get "posts" filter="featured:true" limit="all"}}
+    {{#get "posts" limit="3"}}
         {{#if posts}}
             {{#foreach posts}}
                 <h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
