@@ -95,7 +95,7 @@ into the {body} of the default.hbs template --}}
 
     });
 </script>
-{{/contentFor}} -->
+{{/contentFor}}
 
 {{^is "paged"}}
     {{#get "posts" limit="3"}}
@@ -105,4 +105,21 @@ into the {body} of the default.hbs template --}}
             {{/foreach}}
         {{/if}}
     {{/get}}
-{{/is}}
+{{/is}} -->
+
+<main id="site-main" class="site-main outer">
+    <div class="inner posts">
+
+        <div class="post-feed">
+          {{#get "posts" limit="3"}}
+            {{#foreach posts}}
+
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+
+            {{/foreach}}
+                {{/get}}
+        </div>
+
+    </div>
+</main>
