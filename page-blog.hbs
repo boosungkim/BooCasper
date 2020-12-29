@@ -11,6 +11,7 @@
 {{#post}}
 
 <main id="site-main" class="site-main outer" role="main">
+  <!-- Tags -->
   <div class="inner">
     <header class="post-full-header">
       <h1 class="post-full-title">{{title}}</h1>
@@ -23,25 +24,22 @@
         {{/foreach}}
     {{/get}}
   </div>
+  
+  <div class="inner posts">
+
+      <div class="post-feed">
+          {{#foreach posts}}
+
+              {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+              {{> "post-card"}}
+
+          {{/foreach}}
+      </div>
+
+  </div>
 </main>
 
 {{/post}}
-
-{{!-- The main content area --}}
-<main id="site-main" class="site-main outer">
-    <div class="inner posts">
-
-        <div class="post-feed">
-            {{#foreach posts}}
-
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-
-            {{/foreach}}
-        </div>
-
-    </div>
-</main>
 
 {{> site-header}}
 
