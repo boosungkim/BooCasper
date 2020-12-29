@@ -16,7 +16,7 @@ into the {body} of the default.hbs template --}}
     <h1>Boo Sung's Blog Posts</h1>
     <p>This page contains all my posts in chronological order. You can either scroll through all past blogs or filter using tags. Feel free to take a look!</p>
   </div>
-  <div style='padding-top: 0px; padding-bottom: 0px'>
+  <div style='padding-top: 0px; padding-bottom: 0px; display: flex; justify-content: center'>
     <p style='text-alight: center'>
     {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
     {{#foreach tags}}
