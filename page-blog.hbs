@@ -17,10 +17,10 @@ into the {body} of the default.hbs template --}}
     <p>This page contains all my posts in chronological order. You can either scroll through all past blogs or filter using tags. Feel free to take a look!</p>
   </div>
   <div style='padding-top: 0px; padding-bottom: 0px'>
-    <p>
+    <p style='text-alight: center'>
     {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
     {{#foreach tags}}
-        <a href='{{ url }}'>
+        <a href='{{ url }}' style='padding-left: 5px; padding-right: 5px'>
         {{ name }} <small>[{{ count.posts }}]</small>
         </a>
     {{/foreach}}
