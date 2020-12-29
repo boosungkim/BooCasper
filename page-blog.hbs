@@ -16,13 +16,13 @@ into the {body} of the default.hbs template --}}
     <h1>Boo Sung's Blog Posts</h1>
     <p>This page contains all my posts in chronological order. You can either scroll through all past blogs or filter using tags. Feel free to take a look!</p>
   </div>
-  <div style='padding-top: 1em; padding-bottom: 1em; text-align: center; margin: 0 auto'>
+  <div style='padding-top: 5px; padding-bottom: 5px'>
     <!-- <div style='float: left'> -->
-    <table>
+    <table style='margin-left: auto; margin-right: auto'>
       <tr>
     {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
     {{#foreach tags}}
-    <td>
+    <td style='text-align: center'>
         <a href='{{ url }}' style='padding-left: 1em; padding-right: 1em'>
         <h2>{{ name }} <small>[{{ count.posts }}]</small></h2>
         </a>
