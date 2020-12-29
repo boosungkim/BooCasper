@@ -17,6 +17,7 @@ into the {body} of the default.hbs template --}}
     <p>This page contains all my posts in chronological order. You can either scroll through all past blogs or filter using tags. Feel free to take a look!</p>
   </div>
   <div style='padding-top: 1em; padding-bottom: 1em; text-align: center; margin: 0 auto'>
+    <div style='float: left'>
     {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
     {{#foreach tags}}
         <a href='{{ url }}' style='padding-left: 1em; padding-right: 1em'>
@@ -24,6 +25,7 @@ into the {body} of the default.hbs template --}}
         </a>
     {{/foreach}}
     {{/get}}
+    </div>
   </div>
     <div class="inner posts">
 
