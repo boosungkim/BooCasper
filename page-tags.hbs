@@ -1,22 +1,7 @@
 {{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
 
-<!-- <header class="site-header">
-  <div class="outer site-nav-main">
-    <div class="inner">
-      {{> "site-nav"}}
-      <div class="site-header-content">
-          <h1 class="site-title">
-              {{#if @site.logo}}
-                  <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
-              {{else}}
-                  {{@site.title}}
-              {{/if}}
-          </h1>
-          <h2 class="site-description">{{@site.description}}</h2>
-      </div>
-    </div>
-  </div>
-</header> -->
 <header class="site-home-header">
     {{> header-background background=@site.cover_image}} {{!--Special header-image.hbs partial to generate the background image--}}
         <div class="inner">
@@ -35,63 +20,21 @@
     </div>
 </header>
 
-{{#post}}
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer">
+    <div class="inner posts">
 
-<main id="site-main" class="site-main outer" role="main">
-  <div class="inner">
-    <header class="post-full-header">
-      <h1 class="post-full-title">{{title}}</h1>
-    </header>
-    {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
-      <div id="inner-tags">
-      {{#foreach tags}}
-          <a href='{{ url }}' id='tag-indiv'>
-          <h2>{{ name }} <small>({{ count.posts }})</small></h2>
-          </a>
-        {{/foreach}}
-      </div>
-    {{/get}}
-  </div>
+        <div class="post-feed">
+            {{#foreach posts}}
+
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+
+            {{/foreach}}
+        </div>
+
+    </div>
 </main>
-
-{{/post}}
-
-
-
-<!-- from page-blog -->
-
-{{#post}}
-
-<main id="site-main" class="site-main outer" role="main">
-  <!-- Tags -->
-  <div class="inner">
-    <header class="post-full-header">
-      <h1 class="post-full-title">{{title}}</h1>
-    </header>
-    {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
-      {{#foreach tags}}
-          <a href='{{ url }}' style='display: table-cell; padding-left: 5px; padding-right: 5px'>
-          <h2>{{ name }} <small>({{ count.posts }})</small></h2>
-          </a>
-        {{/foreach}}
-    {{/get}}
-  </div>
-
-  <div class="inner posts">
-
-      <div class="post-feed">
-          {{#foreach posts}}
-
-              {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-              {{> "post-card"}}
-
-          {{/foreach}}
-      </div>
-
-  </div>
-</main>
-
-{{/post}}
 
 {{> site-header}}
 
