@@ -28,31 +28,16 @@ into the {body} of the default.hbs template --}}
     {{/get}}
   </p>
 
-    <!-- <div style='float: left'> -->
-    <!-- <table style='margin-left: auto; margin-right: auto'>
-      <tr>
-    {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
-    {{#foreach tags}}
-    <td style='text-align: center; padding-left: 1em; padding-right: 1em'>
-        <a href='{{ url }}'>
-        <h2>{{ name }} <small>[{{ count.posts }}]</small></h2>
-        </a>
-    </td>
-    {{/foreach}}
-    {{/get}}
-  </tr>
-  </table> -->
-    <!-- </div> -->
   </div>
     <div class="inner posts">
 
         <div class="post-feed">
+          {{#get "posts" filter="tags:-[work-showcase,Blog]"}}
             {{#foreach posts}}
-
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
-
             {{/foreach}}
+            {{/get}}
         </div>
 
     </div>
