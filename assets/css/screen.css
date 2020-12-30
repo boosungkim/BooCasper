@@ -570,12 +570,12 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .home-template .site-nav-main .site-nav {
     opacity: 0;
-    /* transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s; */
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
 }
 
 .home-template .site-nav-main .fixed-nav-active {
     opacity: 1;
-    /* transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0.05s; */
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0.05s;
 }
 
 @media (max-width: 700px) {
