@@ -21,7 +21,6 @@ into the {body} of the default.hbs template --}}
     Tags:
     {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
     {{#foreach tags}}
-    {{^has tag="#Documentation"}}
         <a href='{{ url }}' style='padding-left: 5px; padding-right: 5px'>
         {{ name }} <small>[{{ count.posts }}]</small>
         </a>
