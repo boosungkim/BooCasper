@@ -2877,6 +2877,10 @@ Usage (In Ghost editor):
         flex-direction: column;
     }
 
+    .site-footer-nav{
+        flex-direction: column;
+    }
+
     .site-footer-nav a:first-child {
         margin-left: 0;
     }
