@@ -77,7 +77,7 @@ into the {body} of the default.hbs template --}}
 
 
       <div class="inner posts">
-        <h2 style='font-size: 35px'><a style='text-decoration: none' href='https://boosungkim.com/blog/'>Featured Posts</a></h2>
+        <h2 style='font-size: 35px'>Featured Posts</h2>
           <div class="post-feed" style='padding-bottom: 0px'>
             {{#get "posts" filter="featured:true" limit="3"}}
               {{#foreach posts}}
@@ -87,7 +87,7 @@ into the {body} of the default.hbs template --}}
             {{/get}}
           </div>
 
-          <h2 style='font-size: 30px; margin-top: 10px'><a style='text-decoration: none' href='https://boosungkim.com/blog/'>Recent Posts</a></h2>
+          <h2 style='font-size: 30px; margin-top: 10px'><a style='text-decoration: none; color: #FFF' href='https://boosungkim.com/blog/'>Recent Posts</a></h2>
             <div class="post-feed" style='padding-bottom: 0px'>
               {{#get "posts" filter="tags:-[work-showcase,Project-Showcase]+featured:false" limit="3"}}
                 {{#foreach posts}}
