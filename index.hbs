@@ -100,12 +100,12 @@ into the {body} of the default.hbs template --}}
         }
 
         function update() {
-            // var trigger = feed.getBoundingClientRect().top + window.scrollY;
-            var trigger = feedTwo.getBoundingClientRect().top + window.scrollY;
+            // var trigger = feed.getBoundingClientRect().top + window.scrollY; // trigger - 20
+            var trigger = feedTwo.getBoundingClientRect().top + window.scrollY; // trigger - 38
             var progressMax = lastDocumentHeight - lastWindowHeight;
 
             // show/hide nav
-            if (lastScrollY >= trigger - 20) {
+            if (lastScrollY >= trigger - 38) {
                 nav.classList.add('fixed-nav-active');
             } else {
                 nav.classList.remove('fixed-nav-active');
