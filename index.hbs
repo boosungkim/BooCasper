@@ -39,7 +39,7 @@ into the {body} of the default.hbs template --}}
 
       <div class="inner posts">
         <h1>Featured Posts</h1>
-          <div class="post-feed" style='padding-bottom: 10px'>
+          <div class="post-feed" style='padding-bottom: 0px'>
             {{#get "posts" filter="featured:true" limit="3"}}
               {{#foreach posts}}
                   {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
@@ -49,7 +49,7 @@ into the {body} of the default.hbs template --}}
           </div>
 
           <h1>Recent Posts</h1>
-            <div class="post-feed" style='padding-bottom: 10px'>
+            <div class="post-feed" style='padding-bottom: 0px'>
               {{#get "posts" filter="featured:false" limit="3"}}
                 {{#foreach posts}}
                     {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}

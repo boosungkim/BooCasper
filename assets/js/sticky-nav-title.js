@@ -42,7 +42,7 @@
 
         function update() {
             var trigger = title.getBoundingClientRect().top + window.scrollY;
-            var triggerOffset = title.offsetHeight + 35;
+            var triggerOffset = title.offsetHeight + 10;
 
             // show/hide post title
             if (lastScrollY >= trigger + triggerOffset) {
