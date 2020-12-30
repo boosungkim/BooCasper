@@ -23,13 +23,19 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
       <div class="inner posts">
-        <h1 class="mainpage-title" style='padding-top: 10px'>Hello everyone!</h1>
+        <h1 class="mainpage-title" style='padding-top: 20px'>Hello everyone!</h1>
         <div style='display: flex; flex-direction: row'>
           <div>
             <p style='font-size: 20px'>I live to create projects that I am passionate about - whether that be <a href ="https://github.com/boosungkim/python-chess">an A.I. system</a>, <a href ="https://boosungkim.com">a personal blogging site</a>, <a href ="https://youtube.com/converge2diverge">a Math and CompSci YouTube channel</a>, or anything related.</p>
             <p style='font-size: 20px'>I have 2 goals with this website: 1) to give you an idea of who I am, and 2) to showcase/document my projects and their progress. You can find more info about me in the About Me and my side projects and blog posts through the links in the navigation bar on top.</p>
           </div>
         </div>
+
+        <h2 style='font-size: 30px'>Projects</h2>
+        <p style='font-size: 20px'>Testing</p>
+
+        <h2 style='font-size: 30px'>Where I've Worked</h2>
+        <p style='font-size: 20px'>Testing</p>
 
         <h2 style='font-size: 30px'>Skills</h2>
         <p style='font-size: 20px'>Testing</p>
@@ -49,7 +55,7 @@ into the {body} of the default.hbs template --}}
 
           <h1>Recent Posts</h1>
             <div class="post-feed" style='padding-bottom: 0px'>
-              {{#get "posts" filter="featured:false" limit="3"}}
+              {{#get "posts" filter="tags:-[work-showcase]+featured:false" limit="3"}}
                 {{#foreach posts}}
                     {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                     {{> "post-card"}}
