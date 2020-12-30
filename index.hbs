@@ -23,7 +23,7 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
       <div class="inner posts">
-        <h1 class="mainpage-title" style='padding-top: 20px'>Hello everyone!</h1>
+        <h1 class="mainpage-title" style='font-size:50px; padding-top: 20px'>Hello everyone!</h1>
         <p style='font-size: 20px'>I live to create projects that I am passionate about - whether that be <a href ="https://github.com/boosungkim/python-chess">an A.I. system</a>, <a href ="https://boosungkim.com">a personal blogging site</a>, <a href ="https://youtube.com/converge2diverge">a Math and CompSci YouTube channel</a>, or anything related.</p>
         <p style='font-size: 20px'>I have 2 goals with this website:
           <ol>
@@ -31,15 +31,15 @@ into the {body} of the default.hbs template --}}
             <li>to showcase/document my projects and their progress.</li>
         </ol></p>
 
-        <h2 style='font-size: 30px'>About Me</h2>
-        <h3 style='font-size:25px'>Who am I?</h3>
-        <p style='font-size: 20px'>I am a student double majoring in Math and Computer Science at Dickinson College. I started my journey in high school with Mathemathics, but I came to fall in love with computing soon after.</p>
-        <h3 style='font-size:25px'>What am I working on?</h3>
+        <h2 style='font-size: 35px'>About Me</h2>
+        <h3 style='font-size:25px; margin-top: 17px'>Who am I?</h3>
+        <p style='font-size: 20px'>I am an undergraduate student double majoring in Math and Computer Science at Dickinson College. I started my journey in high school with Mathemathics, but I came to fall in love with computing soon after.</p>
+        <h3 style='font-size:25px; margin-top: 17px'>What am I working on?</h3>
         <p style='font-size: 20px'>While I've explored different fields, I now focus primarily on Artificial Intelligence and Machine Learning. I recently created my first A.I. - a Chess engine that utilizes the Minimax and Alpha Beta Pruning algorithm. I am now working on machine learning projects while studying Deep Learning.</p>
         <p style='font-size: 20px'>Alongside my undergraduate studies and side projects, I also maintain <a href="https://boosungkim.com/blog/">a blog</a> and my YouTube channel, <a href="https://youtube.com/converge2diverge">Converge2Diverge</a>. I write about my projects, progress on my studies, and opinions about news in the computing world. Similarly, I create videos about various Mathematics/Computer Science topics.</p>
 
 
-        <h2 style='font-size: 30px'>Projects</h2>
+        <h2 style='font-size: 35px'>Projects</h2>
         <p style='font-size: 20px'>View the rest in the <a href="https://boosungkim.com/projects/">Projects page</a>!</p>
         <div class="post-feed" style='padding-bottom: 0px'>
           {{#get "posts" filter="tags:[Project-Showcase]+featured:true" limit="3"}}
@@ -50,7 +50,7 @@ into the {body} of the default.hbs template --}}
           {{/get}}
         </div>
 
-        <h2 style='font-size: 30px'>Where I've Worked</h2>
+        <h2 style='font-size: 35px'>Where I've Worked</h2>
         <div class="post-feed" style='padding-bottom: 0px'>
           {{#get "posts" filter="tags:[work-showcase]" limit="all"}}
             {{#foreach posts}}
@@ -60,7 +60,7 @@ into the {body} of the default.hbs template --}}
           {{/get}}
         </div>
 
-        <h2 style='font-size: 30px; margin-top: 10px'>Skills</h2>
+        <h2 style='font-size: 35px; margin-top: 10px'>Skills</h2>
         <p style='font-size: 20px'>Skill sets and technologies I've worked with:</p>
         <ul>
           <!-- <li>Machine Learning: </li> -->
@@ -75,7 +75,7 @@ into the {body} of the default.hbs template --}}
 
 
       <div class="inner posts">
-        <h2 style='font-size: 30px'>Featured Posts</h2>
+        <h2 style='font-size: 35px'>Featured Posts</h2>
           <div class="post-feed" style='padding-bottom: 0px'>
             {{#get "posts" filter="featured:true" limit="3"}}
               {{#foreach posts}}
