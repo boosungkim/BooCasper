@@ -2,20 +2,10 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-<header class="site-home-header">
-    {{> header-background background=@site.cover_image}} {{!--Special header-image.hbs partial to generate the background image--}}
+<header class="site-header">
+    <div class="outer site-nav-main">
         <div class="inner">
             {{> "site-nav"}}
-            <div class="site-header-content">
-                <h1 class="site-title">
-                    {{#if @site.logo}}
-                        <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
-                    {{else}}
-                        {{@site.title}}
-                    {{/if}}
-                </h1>
-                <h2 class="site-description">{{@site.description}}</h2>
-            </div>
         </div>
     </div>
 </header>
@@ -27,7 +17,6 @@ into the {body} of the default.hbs template --}}
       <p>This page contains all my projects. (Descriptions currently still being added)</p>
     </div>
 
-    <p style='font-size: 20px'>View the rest in the <a href="https://boosungkim.com/projects/">Projects page</a>!</p>
     <div class="post-feed" style='padding-bottom: 0px'>
       {{#get "posts" filter="tags:[Project-Showcase]" limit="all"}}
         {{#foreach posts}}
