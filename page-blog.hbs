@@ -22,7 +22,8 @@ into the {body} of the default.hbs template --}}
     {{#get 'tags' filter='slug:-[work-showcase,ongoing-project,completed-project]' limit='all' include='count.posts' order="name asc"}}
     {{#foreach tags}}
         <a href='{{ url }}' style='padding-left: 5px; padding-right: 5px'>
-        {{ name }} <small>[{{ count.posts }}]</small>
+        <!-- {{ name }} <small>[{{ count.posts }}]</small> -->
+        {{ name }}
         </a>
     {{/foreach}}
     {{/get}}
