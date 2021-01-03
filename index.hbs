@@ -79,7 +79,7 @@ into the {body} of the default.hbs template --}}
       <div class="inner posts">
         <h2 style='font-size: 35px'>Featured Posts</h2>
           <div class="post-feed" style='padding-bottom: 0px'>
-            {{#get "posts" filter="featured:true" limit="3"}}
+            {{#get "posts" filter="tags:-[work-showcase,Project-Showcase]+featured:true" limit="3"}}
               {{#foreach posts}}
                   {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                   {{> "post-card"}}
