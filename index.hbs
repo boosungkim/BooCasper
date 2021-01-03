@@ -90,7 +90,7 @@ into the {body} of the default.hbs template --}}
           <!-- <h2 style='font-size: 30px; margin-top: 10px'><a style='text-decoration: none' href='https://boosungkim.com/blog/'>Recent Posts</a></h2> -->
             <h2 style='font-size: 35px'>Recent Posts</h2>
             <div class="post-feed" style='padding-bottom: 0px'>
-              {{#get "posts" filter="tags:-[work-showcase,Project-Showcase]+featured:false" limit="3"}}
+              {{#get "posts" filter="tags:-[work-showcase]+featured:false" limit="3"}}
                 {{#foreach posts}}
                     {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                     {{> "post-card"}}
