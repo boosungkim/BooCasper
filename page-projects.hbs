@@ -19,7 +19,7 @@ into the {body} of the default.hbs template --}}
 
     <h2 style='font-size: 35px'>Ongoing Projects</h2>
     <div class="post-feed" style='padding-bottom: 0px'>
-      {{#get "posts" filter="tags:[Project-Showcase,ongoing-projects]" limit="all"}}
+      {{#get "posts" filter="tags:[Project-Showcase]+tag:[ongoing-projects]" limit="all"}}
         {{#foreach posts}}
             {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
             {{> "post-card"}}
@@ -29,7 +29,7 @@ into the {body} of the default.hbs template --}}
 
     <h2 style='font-size: 35px'>Completed Projects</h2>
     <div class="post-feed" style='padding-bottom: 0px'>
-      {{#get "posts" filter="tags:[Project-Showcase,completed-projects]" limit="all"}}
+      {{#get "posts" filter="tags:[Project-Showcase]+tag:[completed-projects]" limit="all"}}
         {{#foreach posts}}
             {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
             {{> "post-card"}}
