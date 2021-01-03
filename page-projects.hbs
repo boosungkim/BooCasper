@@ -14,17 +14,31 @@ into the {body} of the default.hbs template --}}
 <main id="site-main" class="site-main outer">
     <div style='padding-top: 7em; text-align: center'>
       <h1>Boo Sung's Projects</h1>
-      <p>This page contains all my projects. (Descriptions currently still being added)</p>
+      <p>This page contains all my ongoing and completed projects. (Descriptions currently still being added)</p>
     </div>
 
+    <h2 style='font-size: 35px'>Ongoing Projects</h2>
     <div class="post-feed" style='padding-bottom: 0px'>
-      {{#get "posts" filter="tags:[Project-Showcase]" limit="all"}}
+      {{#get "posts" filter="tags:[Project-Showcase,ongoing-projects]" limit="all"}}
         {{#foreach posts}}
             {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
             {{> "post-card"}}
         {{/foreach}}
       {{/get}}
     </div>
+
+    <h2 style='font-size: 35px'>Completed Projects</h2>
+    <div class="post-feed" style='padding-bottom: 0px'>
+      {{#get "posts" filter="tags:[Project-Showcase,completed-projects]" limit="all"}}
+        {{#foreach posts}}
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "post-card"}}
+        {{/foreach}}
+      {{/get}}
+    </div>
+
+
+
     <!-- Potentially add categorization for projects in the future -->
 </main>
 
